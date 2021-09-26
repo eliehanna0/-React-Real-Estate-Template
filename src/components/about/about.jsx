@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Head from "../common/head";
 import {
   Container,
   Grid,
@@ -6,8 +7,8 @@ import {
   Paper,
   Typography,
 } from "@material-ui/core";
+import { getAbout } from "../../services/api";
 import CircularProgress from "@material-ui/core/CircularProgress";
-import Head from "../common/head";
 
 /*
 
@@ -32,10 +33,7 @@ const About = (props) => {
     console.log("component did mount");
     setData(false);
     async function get() {
-      let data = {
-        text: "sample text",
-        image: "",
-      };
+      let { data } = await getAbout();
       setData(data);
     }
     setTimeout(() => {
