@@ -7,6 +7,7 @@ import {
   Typography,
 } from "@material-ui/core";
 import Property from "./property";
+import { getProperties } from "../../services/api";
 
 const styles = makeStyles((theme) => ({
   paper: {
@@ -28,7 +29,11 @@ const PropertyGrid = () => {
 
   useEffect(() => {
     console.log("component did mount");
-    let data = {};
+    async function get() {
+      let { data } = await getProperties();
+      setFData(data.filter((d) => d.featured === 1));
+    }
+    get();
   }, []);
 
   return (
