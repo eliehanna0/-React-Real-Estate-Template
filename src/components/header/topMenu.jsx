@@ -6,6 +6,7 @@ const TopMenu = () => {
     <React.Fragment>
       <MenuItem url="/" label="Properties" />
       <MenuItem url="/about" label="About Us" />
+      <MenuItem url="/contact" label="Contact Us" />
     </React.Fragment>
   );
 };

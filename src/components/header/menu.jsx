@@ -32,6 +32,13 @@ const list = (anchor, classes, parentProps) => (
         icon={<Person />}
         parentProps={parentProps}
       />
+      <MenuItem
+        list={true}
+        url="/CONTACT"
+        label="CONTACT US"
+        icon={<Smartphone />}
+        parentProps={parentProps}
+      />
     </List>
   </div>
 );
