@@ -1,12 +1,31 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
 import { CssBaseline, makeStyles, MuiThemeProvider } from "@material-ui/core/";
+import "./css/App.css";
 import Home from "./components/home/home";
+import theme from "./components/common/theme";
+
+const useStyles = makeStyles((theme) => ({
+  root: {
+    flexGrow: 1,
+  },
+  paper: {
+    padding: theme.spacing(4),
+    textAlign: "center",
+    color: theme.palette.text.secondary,
+  },
+  menuButton: {
+    marginRight: theme.spacing(2),
+  },
+  title: {
+    flexGrow: 1,
+  },
+}));
 
 const App = () => {
   return (
     <React.Fragment>
-      <MuiThemeProvider>
+      <MuiThemeProvider theme={theme}>
         <CssBaseline />
         <Switch>
           <Route exact path="/">
