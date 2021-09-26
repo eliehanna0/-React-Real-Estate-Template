@@ -5,6 +5,7 @@ const TopMenu = () => {
   return (
     <React.Fragment>
       <MenuItem url="/" label="Properties" />
+      <MenuItem url="/about" label="About Us" />
     </React.Fragment>
   );
 };
