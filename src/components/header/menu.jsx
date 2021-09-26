@@ -25,6 +25,13 @@ const list = (anchor, classes, parentProps) => (
         icon={<HomeWork />}
         parentProps={parentProps}
       />
+      <MenuItem
+        list={true}
+        url="/about"
+        label="ABOUT US"
+        icon={<Person />}
+        parentProps={parentProps}
+      />
     </List>
   </div>
 );
