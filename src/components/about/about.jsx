@@ -7,6 +7,7 @@ import {
   Typography,
 } from "@material-ui/core";
 import CircularProgress from "@material-ui/core/CircularProgress";
+import Head from "../common/head";
 
 /*
 
@@ -45,6 +46,7 @@ const About = (props) => {
 
   return (
     <React.Fragment>
+      <Head title="About Us" />
       <Container maxWidth="md">
         <Grid container>
           <Grid item xs={12}>
