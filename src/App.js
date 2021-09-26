@@ -5,6 +5,7 @@ import "./css/App.css";
 import Header from "./components/header/header";
 import Home from "./components/home/home";
 import About from "./components/about/about";
+import Contact from "./components/contact/contact";
 import theme from "./components/common/theme";
 
 const useStyles = makeStyles((theme) => ({
@@ -35,6 +36,7 @@ const App = () => {
             <Home />
           </Route>
           <Route path="/about" component={About} />
+          <Route path="/contact" component={Contact} />
         </Switch>
       </MuiThemeProvider>
     </React.Fragment>
