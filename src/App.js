@@ -1,11 +1,14 @@
 import React from "react";
-import { Route, Switch } from "react-router-dom";
+import { Route, Redirect, Switch } from "react-router-dom";
+
 import { CssBaseline, makeStyles, MuiThemeProvider } from "@material-ui/core/";
 import "./css/App.css";
 import Header from "./components/header/header";
+import PropertySingle from "./components/properties/property.single";
 import Home from "./components/home/home";
 import About from "./components/about/about";
 import Contact from "./components/contact/contact";
+import Head from "./components/common/head";
 import theme from "./components/common/theme";
 
 const useStyles = makeStyles((theme) => ({
@@ -31,12 +34,14 @@ const App = () => {
       <MuiThemeProvider theme={theme}>
         <CssBaseline />
         <Header />
+        <Head title="" />
         <Switch>
           <Route exact path="/">
             <Home />
           </Route>
           <Route path="/about" component={About} />
           <Route path="/contact" component={Contact} />
+          <Route path="/property/:id" component={PropertySingle} />
         </Switch>
       </MuiThemeProvider>
     </React.Fragment>
