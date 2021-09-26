@@ -2,6 +2,7 @@ import React from "react";
 import { Route, Switch } from "react-router-dom";
 import { CssBaseline, makeStyles, MuiThemeProvider } from "@material-ui/core/";
 import "./css/App.css";
+import Header from "./components/header/header";
 import Home from "./components/home/home";
 import theme from "./components/common/theme";
 
@@ -27,6 +28,7 @@ const App = () => {
     <React.Fragment>
       <MuiThemeProvider theme={theme}>
         <CssBaseline />
+        <Header />
         <Switch>
           <Route exact path="/">
             <Home />
