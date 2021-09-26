@@ -1,9 +1,12 @@
 import React from "react";
+import PropertyGrid from "../properties/property.grid";
+import Head from "../common/head";
 
 const Home = () => {
   return (
     <React.Fragment>
-      <h1>This is homepage</h1>
+      <Head title="Home" />
+      <PropertyGrid />
     </React.Fragment>
   );
 };
