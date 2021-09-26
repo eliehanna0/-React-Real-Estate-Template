@@ -5,14 +5,9 @@ import { Link } from "react-router-dom";
 import PropertyIcons from "./property.icons";
 import * as s from "./property.module.css";
 
-/*
-
-
- */
 const styles = makeStyles((theme) => ({
   paper: {
     padding: theme.spacing(0),
-    // textAlign: "center",
     color: theme.palette.text.secondary,
   },
   img: {},
