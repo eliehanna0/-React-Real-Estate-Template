@@ -4,6 +4,7 @@ import { CssBaseline, makeStyles, MuiThemeProvider } from "@material-ui/core/";
 import "./css/App.css";
 import Header from "./components/header/header";
 import Home from "./components/home/home";
+import About from "./components/about/about";
 import theme from "./components/common/theme";
 
 const useStyles = makeStyles((theme) => ({
@@ -33,6 +34,7 @@ const App = () => {
           <Route exact path="/">
             <Home />
           </Route>
+          <Route path="/about" component={About} />
         </Switch>
       </MuiThemeProvider>
     </React.Fragment>
